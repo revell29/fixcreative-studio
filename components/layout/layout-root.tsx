@@ -3,6 +3,7 @@ import { Flex, Box } from '@chakra-ui/react';
 import { Navbar } from './navbar';
 import { getCategory } from '~/lib/api/commons';
 import { FragmentCategory } from '~/types/base';
+import { Footer } from './footer';
 
 export const LayoutRoot: React.FC = ({ children }) => {
   const [category, setCategory] = React.useState<FragmentCategory[]>([]);
@@ -19,6 +20,7 @@ export const LayoutRoot: React.FC = ({ children }) => {
     <Flex flexDir="column" minH="100vh">
       <Navbar categoryData={category} />
       <Box py={{ base: 2, md: 10 }}>{children}</Box>
+      <Footer />
     </Flex>
   );
 };
