@@ -71,7 +71,7 @@ export const Navbar: React.FC<NavbarProps> = (props: NavbarProps) => {
                     {categoryData &&
                       categoryData.map((category: FragmentCategory, index: number) => (
                         <Link href={`/category/${category.attributes.category_name}`} key={index} passHref>
-                          <MenuItem key={index} _hover={{ color: 'yellow.500' }}>
+                          <MenuItem as="button" key={index} _hover={{ color: 'yellow.500' }}>
                             {category.attributes.category_name}
                           </MenuItem>
                         </Link>
@@ -82,8 +82,8 @@ export const Navbar: React.FC<NavbarProps> = (props: NavbarProps) => {
                   <Link key={name} href={route} passHref>
                     <Button
                       as="a"
-                      colorScheme={isRoute(route) ? 'black' : 'black'}
-                      fontWeight={isRoute(route) ? 'bold' : 'normal'}
+                      fontWeight="normal"
+                      color={isRoute(route) ? 'yellow.500' : undefined}
                       variant="ghost"
                       _hover={{ color: 'yellow.500' }}
                     >

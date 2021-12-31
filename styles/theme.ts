@@ -40,6 +40,26 @@ export default extendTheme(<ThemeOverride>(<unknown>{
       darkblue: '#090b18',
     },
   },
+
+  components: {
+    Text: {
+      baseStyle: {
+        fontWeight: 100,
+        color: '#666',
+        letterSpacing: '-0.003em',
+        lineHeight: '2.2em',
+        fontSize: '15px',
+      },
+    },
+    Heading: {
+      baseStyle: {
+        fontWeight: 100,
+        color: '#000',
+        fontSize: '15px',
+      },
+    },
+  },
+
   shadows: {
     'shadow-smallest': '0px 2px 4px rgba(0,0,0,0.1)',
     'shadow-extra-small': '0px 4px 8px rgba(0,0,0,0.12)',
@@ -52,7 +72,9 @@ export default extendTheme(<ThemeOverride>(<unknown>{
   },
   fonts: {
     body: `'Poppins',${defaultTheme.fonts.body}`,
+    heading: `'Antic Didone',${defaultTheme.fonts.heading}`,
   },
+
   config: {
     initialColorMode: 'white',
   },
@@ -63,6 +85,10 @@ export default extendTheme(<ThemeOverride>(<unknown>{
       },
       html: {
         scrollBehavior: 'smooth',
+      },
+      'button:focus': {
+        outline: 'none !important',
+        boxShadow: 'none',
       },
       body: {
         background: 'white',

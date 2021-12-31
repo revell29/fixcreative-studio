@@ -26,3 +26,12 @@ export interface BlogAttributes {
   slug: string;
   [key: string]: any;
 }
+
+export interface AboutUs {
+  id: number;
+  attributes: AboutUsAttributes;
+}
+
+export interface AboutUsAttributes {
+  description: string;
+}
