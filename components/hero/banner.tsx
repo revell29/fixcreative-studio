@@ -14,17 +14,18 @@ export const MainHero: React.FC = () => {
           objectFit="cover"
           postion="absolute"
         />
-        <Box bg="white" w="full" h="full" position="absolute" top={0} opacity="0.1" />
+        <Box bg="black" w="full" h="full" position="absolute" top={0} opacity="0.5" />
       </Box>
-      <Box position="relative" w="full" maxW="100vw" zIndex={1} mx="auto" pt="10vw" color="white">
-        <Heading fontSize={['3.125rem', '3.125rem', '4rem']} maxW="600px" m="auto">
-          Unlimited movies, TV shows, and more.
+      <Box position="relative" w="full" maxW="950px" zIndex={1} pt="10vw" color="white">
+        <Heading
+          fontSize={['3.125rem', '3.125rem', '5rem']}
+          px="5rem"
+          mb={24}
+          fontWeight="normal"
+          fontFamily="Antic Didone"
+        >
+          CAPTURING EVERY MOMENT ON YOUR BIG DAY
         </Heading>
-        <Link href="/register" passHref>
-          <Button as="a" variant="primary" size="lg" mt={10}>
-            Register Now
-          </Button>
-        </Link>
       </Box>
     </Box>
   );
