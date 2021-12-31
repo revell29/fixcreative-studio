@@ -1,9 +1,19 @@
 import * as React from 'react';
 import { Box, Flex, Text } from '@chakra-ui/react';
 
-export const FooterHero: React.FC = () => {
+export const Footer: React.FC = () => {
   return (
-    <Box bg="primary.accent7" w="full" h="full" px="12rem" color="white" pt="15px" pb="10px" fontFamily="Open Sans">
+    <Box
+      bg="primary.accent7"
+      w="full"
+      h="full"
+      px={{ base: '20px', lg: '12rem' }}
+      py={10}
+      color="white"
+      pt="15px"
+      pb="10px"
+      fontFamily="Open Sans"
+    >
       <Flex>
         <Flex direction="column">
           <Text fontWeight="semibold">Link</Text>

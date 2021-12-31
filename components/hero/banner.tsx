@@ -4,7 +4,18 @@ import * as React from 'react';
 
 export const MainHero: React.FC = () => {
   return (
-    <Box h="full" w="full" left={0} right={0} bottom={0} zIndex={0} overflowY="hidden" color="white" p={10} mb="8px">
+    <Box
+      h="full"
+      w="full"
+      left={0}
+      right={0}
+      bottom={0}
+      zIndex={0}
+      overflowY="hidden"
+      color="white"
+      p={10}
+      mb={{ base: '15rem', sm: '10rem', md: '12rem', lg: '0' }}
+    >
       <Box position="absolute" top={0} left={0} bottom={0} right={0} h="706.984px" zIndex={0}>
         <Image
           alt=""
@@ -18,8 +29,8 @@ export const MainHero: React.FC = () => {
       </Box>
       <Box position="relative" w="full" maxW="950px" zIndex={1} pt="10vw" color="white">
         <Heading
-          fontSize={['3.125rem', '3.125rem', '5rem']}
-          px="5rem"
+          fontSize={['2rem', '3.125rem', '3.125rem', '5rem']}
+          px={{ lg: '5rem' }}
           mb={24}
           fontWeight="normal"
           fontFamily="Antic Didone"

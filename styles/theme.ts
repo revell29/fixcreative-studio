@@ -48,11 +48,48 @@ export default extendTheme(<ThemeOverride>(<unknown>{
     'shadow-large': '0 30px 60px rgba(0,0,0,0.12)',
     'shadow-hover': '0 30px 60px rgba(0,0,0,0.12)',
     'shadow-stiky': '0 12px 10px -10px rgba(0,0,0,0.12)',
+    'shadow-soft': '0 5px 10px rgb(73 84 100 / 5%)',
   },
   fonts: {
     body: `'Poppins',${defaultTheme.fonts.body}`,
   },
   config: {
     initialColorMode: 'white',
+  },
+  styles: {
+    global: {
+      '::selection, ::-moz-selection': {
+        bgColor: 'whiteAlpha.400',
+      },
+      html: {
+        scrollBehavior: 'smooth',
+      },
+      body: {
+        background: 'white',
+        cursor: 'default',
+        fontFamily: 'body',
+        lineHeight: 'base',
+        minH: '100vh',
+        MozOsxFontSmoothing: 'grayscale',
+        WebkitFontSmoothing: 'antialiased',
+        textRendering: 'optimizeLegibility',
+      },
+      '#nprogress': {
+        pointerEvents: 'none',
+      },
+      '#nprogress .bar': {
+        bgGradient: 'linear(to-r, whiteAlpha.400, yellow.200)',
+        h: '2px',
+        left: 0,
+        pos: 'fixed',
+        top: 0,
+        w: 'full',
+        zIndex: 2000,
+      },
+      '.nprogress-custom-parent': {
+        overflow: 'hidden',
+        position: 'absolute',
+      },
+    },
   },
 }));
