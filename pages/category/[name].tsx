@@ -1,4 +1,4 @@
-import { Container, Heading, SimpleGrid } from '@chakra-ui/react';
+import { Container, Heading, SimpleGrid, Text } from '@chakra-ui/react';
 import type { GetServerSideProps, NextPage } from 'next';
 import { useRouter } from 'next/router';
 import { CardBlog } from '~/components/card/card-blog';
@@ -23,9 +23,12 @@ const Category: NextPage<BlogsByCategoryProps> = ({ blogs }: BlogsByCategoryProp
         <Heading textTransform="capitalize" color="gray.600">
           {query.name}
         </Heading>
-        <SimpleGrid py="3rem" gap={4} columns={[2, 3, 4]}>
-          {blogs && blogs.map((blog) => <CardBlog key={blog.id} blogs={blog} />)}
-        </SimpleGrid>
+        {blogs.length === 0 && <Text py={10}>Data Kosong</Text>}
+        {blogs.length > 0 && (
+          <SimpleGrid py="3rem" gap={4} columns={[2, 3, 4]}>
+            {blogs && blogs.map((blog) => <CardBlog key={blog.id} blogs={blog} />)}
+          </SimpleGrid>
+        )}
       </Container>
     </>
   );

@@ -3,7 +3,7 @@ import { Box, Flex, Text, Image, Stack, HStack, Link } from '@chakra-ui/react';
 
 export const Footer: React.FC = () => {
   return (
-    <Box bg="primary.accent7" w="full" h="full" px={{ base: '20px', lg: '12rem' }}>
+    <Box bg="primary.accent7" w="full" h="full" px={{ base: '20px', lg: '12rem' }} mt={10}>
       <Stack py={{ base: '10', lg: '20' }} direction={['column', 'row']} spacing={{ base: '2', sm: '5', lg: '10' }}>
         <Flex direction="column" justifyContent="left">
           <Text color="white" fontSize="14px" fontWeight="semibold">
