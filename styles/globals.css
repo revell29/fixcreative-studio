@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Antic+Didone&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap');
 
 html,
 body {
@@ -16,4 +17,14 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.custom-dot-list-style {
+  padding-top: 2rem !important;
+  margin-top: 20px;
+  height: 60px;
+}
+
+.carousel-container {
+  padding: 4rem 0rem;
 }

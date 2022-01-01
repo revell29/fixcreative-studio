@@ -12,7 +12,6 @@ export const Footer: React.FC = () => {
       color="white"
       pt="15px"
       pb="10px"
-      fontFamily="Open Sans"
     >
       <Flex>
         <Flex direction="column">

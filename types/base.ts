@@ -35,3 +35,18 @@ export interface AboutUs {
 export interface AboutUsAttributes {
   description: string;
 }
+
+export interface ImagesList {
+  id: number;
+  url: string;
+}
+
+export interface Reviews {
+  id: number;
+  attributes: ReviewsAttributes;
+}
+
+export interface ReviewsAttributes {
+  customer_name: string;
+  review: string;
+}

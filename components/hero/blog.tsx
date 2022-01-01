@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Box, SimpleGrid, Image, Text, Button, Flex, HStack } from '@chakra-ui/react';
+import { Box, Image, Text, Button, Flex, HStack } from '@chakra-ui/react';
 
 export const BlogHero: React.FC = () => {
   return (
@@ -25,18 +25,6 @@ export const BlogHero: React.FC = () => {
         BLOG POST
       </Text>
       <HStack spacing={10} justify="center" mb={{ sm: '-1rem', lg: '1.5rem' }}>
-        <Box w="208px" h="291px" rounded="sm">
-          <Image
-            src="https://ali.sandbox.etdevs.com/divi/wp-content/uploads/sites/2/2020/05/wedding-photographer-59.jpg"
-            alt=""
-          />
-        </Box>
-        <Box w="208px" h="291px" rounded="sm">
-          <Image
-            src="https://ali.sandbox.etdevs.com/divi/wp-content/uploads/sites/2/2020/05/wedding-photographer-59.jpg"
-            alt=""
-          />
-        </Box>
         <Box w="208px" h="291px" rounded="sm">
           <Image
             src="https://ali.sandbox.etdevs.com/divi/wp-content/uploads/sites/2/2020/05/wedding-photographer-59.jpg"
