@@ -50,3 +50,13 @@ export interface ReviewsAttributes {
   customer_name: string;
   review: string;
 }
+
+export interface Faq {
+  id: number;
+  attributes: FaqAttributes;
+}
+
+export interface FaqAttributes {
+  title: string;
+  description: string;
+}

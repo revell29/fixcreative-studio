@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { AboutUs, FragmentCategory, Reviews } from '~/types/base';
+import { AboutUs, Faq, FragmentCategory, Reviews } from '~/types/base';
 import { API_URL, TOKEN } from '../config';
 import qs from 'qs';
 
@@ -42,6 +42,19 @@ export const getReviews = async (): Promise<Reviews[]> => {
       },
     });
     const res = await axios.get(`${API_URL}/api/reviews?${query}`, {
+      headers: {
+        Authorization: `Bearer ${TOKEN}`,
+      },
+    });
+    return res.data.data;
+  } catch (error: any) {
+    return error.response.data;
+  }
+};
+
+export const getFaq = async (): Promise<Faq[]> => {
+  try {
+    const res = await axios.get(`${API_URL}/api/faqs`, {
       headers: {
         Authorization: `Bearer ${TOKEN}`,
       },

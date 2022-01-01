@@ -26,7 +26,7 @@ const Blogs: NextPage<BlogsProps> = ({ blogs }: BlogsProps) => {
           borderRadius="xl"
           w="full"
         />
-        <Box w="100%" mx="auto" sx={{ columnCount: [2, 2, 3], columnGap: 2 }}>
+        <Box w="100%" mx="auto" sx={{ columnCount: [2, 2, 2, 4], columnGap: 2 }}>
           {blogs[0].attributes.images.data.map((image: any, index: number) => (
             <Image
               _hover={{ border: '4px', borderColor: 'yellow.500', cursor: 'pointer' }}

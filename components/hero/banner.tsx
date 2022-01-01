@@ -6,7 +6,7 @@ export const MainHero: React.FC = () => {
   return (
     <Flex h="full" w="full" left={0} right={0} bottom={0} zIndex={0} color="white" py={20}>
       <Box position="relative" w="full" zIndex={1} pt="10vw" color="white">
-        <Heading fontSize={['2rem', '3.125rem', '3.125rem', '5rem']} mb={24} fontWeight="normal">
+        <Heading fontSize={['2rem', '3.125rem', '3.125rem', '5rem']} mb={24} fontWeight="normal" color="yellow.500">
           CAPTURING EVERY MOMENT ON YOUR BIG DAY
         </Heading>
       </Box>
