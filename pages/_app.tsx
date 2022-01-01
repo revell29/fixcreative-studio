@@ -6,6 +6,8 @@ import { LayoutRoot } from '~/components/layout/layout-root';
 import NProgress from 'nprogress';
 import 'nprogress/nprogress.css';
 import * as React from 'react';
+import { DefaultSeo } from 'next-seo';
+import { DEFAULT_SEO } from '~/lib/config';
 
 function MyApp({ Component, pageProps, router }: AppProps) {
   React.useEffect(() => {
@@ -32,6 +34,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
   return (
     <ChakraProvider theme={theme}>
       <LayoutRoot>
+        <DefaultSeo {...DEFAULT_SEO} />
         <Component {...pageProps} />
       </LayoutRoot>
     </ChakraProvider>

@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 import { CardBlog } from '~/components/card/card-blog';
 import { getBlogsByCategory } from '~/lib/api/blogs';
 import { FragmentBlogs } from '~/types/base';
+import { NextSeo } from 'next-seo';
 
 interface BlogsByCategoryProps {
   blogs: FragmentBlogs[];
@@ -13,14 +14,20 @@ const Category: NextPage<BlogsByCategoryProps> = ({ blogs }: BlogsByCategoryProp
   const { query } = useRouter();
 
   return (
-    <Container maxW="container.xl">
-      <Heading textTransform="capitalize" color="gray.600">
-        {query.name}
-      </Heading>
-      <SimpleGrid py="3rem" gap={4} columns={[2, 3, 4]}>
-        {blogs && blogs.map((blog) => <CardBlog key={blog.id} blogs={blog} />)}
-      </SimpleGrid>
-    </Container>
+    <>
+      <NextSeo
+        title={`${query.name as string} - Fix Creative Studio`}
+        description={`Gallery ${query.name as string}`}
+      />
+      <Container maxW="container.xl">
+        <Heading textTransform="capitalize" color="gray.600">
+          {query.name}
+        </Heading>
+        <SimpleGrid py="3rem" gap={4} columns={[2, 3, 4]}>
+          {blogs && blogs.map((blog) => <CardBlog key={blog.id} blogs={blog} />)}
+        </SimpleGrid>
+      </Container>
+    </>
   );
 };
 
