@@ -19,12 +19,16 @@ a {
   box-sizing: border-box;
 }
 
-.custom-dot-list-style {
-  padding-top: 2rem !important;
-  margin-top: 20px;
-  height: 60px;
+.slick-track {
+  margin-bottom: 2rem !important;
 }
-
-.carousel-container {
-  padding: 4rem 0rem;
+.slick-next:before,
+.slick-prev:before {
+  font-family: 'swiper-icons';
+  font-size: 44px !important;
+  text-transform: none !important;
+  letter-spacing: 0;
+  text-transform: none;
+  font-variant: normal;
+  line-height: 1;
 }
