@@ -25,7 +25,7 @@ const Category: NextPage<BlogsByCategoryProps> = ({ blogs }: BlogsByCategoryProp
         </Heading>
         {blogs.length === 0 && <Text py={10}>Data Kosong</Text>}
         {blogs.length > 0 && (
-          <SimpleGrid py="3rem" gap={4} columns={[2, 3, 4]}>
+          <SimpleGrid py="3rem" gap={4} columns={[1, 2, 3, 4]}>
             {blogs && blogs.map((blog) => <CardBlog key={blog.id} blogs={blog} />)}
           </SimpleGrid>
         )}

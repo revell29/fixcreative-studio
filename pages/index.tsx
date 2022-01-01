@@ -34,7 +34,7 @@ const Home: NextPage<HomeProps> = ({ blogs, reviews, faq }: HomeProps) => {
           <Heading fontSize={{ base: '2em', md: '3em' }} textAlign="center" color="yellow.500">
             Every Special Moment
           </Heading>
-          <SimpleGrid gap={4} columns={[2, 2, 4]} mt={16}>
+          <SimpleGrid gap={4} columns={[1, 2, 3, 4]} mt={16}>
             {blogs && blogs.map((blog) => <CardBlog key={blog.id} blogs={blog} />)}
           </SimpleGrid>
         </Box>

@@ -19,7 +19,9 @@ export const LayoutRoot: React.FC = ({ children }) => {
   return (
     <Flex flexDir="column" minH="100vh">
       <Navbar categoryData={category} />
-      <Box py={{ base: 2, md: 10 }}>{children}</Box>
+      <Box flex={1} py={{ base: 5, md: 10 }}>
+        {children}
+      </Box>
       <Footer />
     </Flex>
   );
