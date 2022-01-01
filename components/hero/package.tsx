@@ -33,6 +33,8 @@ export const PackageHero: React.FC = () => {
         </Box>
         <Button
           as="a"
+          href="https://wa.link/qf5ff5"
+          target="_blank"
           mt={10}
           variant="link"
           _hover={{ cursor: 'pointer', color: 'yellow.100' }}
