@@ -33,7 +33,7 @@ export const PackageHero: React.FC = () => {
         </Box>
         <Button
           as="a"
-          href="https://wa.link/qf5ff5"
+          href="https://drive.google.com/u/0/uc?id=1nH73CSd-tpCVHMLN5rp1wukjOfqEYNbL&export=download"
           target="_blank"
           mt={10}
           variant="link"
@@ -45,7 +45,7 @@ export const PackageHero: React.FC = () => {
           pb={2}
           borderRadius="0px"
         >
-          Pricing Packages
+          See Prices
         </Button>
       </Box>
       <Box

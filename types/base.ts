@@ -60,3 +60,22 @@ export interface FaqAttributes {
   title: string;
   description: string;
 }
+
+export interface Vendor {
+  id: number;
+  attributes: VendorAttributes;
+}
+
+export interface VendorAttributes {
+  vendor_name: string;
+  logo: Record<string, any>;
+}
+
+export interface TermCondtion {
+  id: number;
+  attributes: TermConditionAttributes;
+}
+
+export interface TermConditionAttributes {
+  description: string;
+}

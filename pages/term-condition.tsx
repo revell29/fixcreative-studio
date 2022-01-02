@@ -1,14 +1,14 @@
 import { Container, Text, Heading } from '@chakra-ui/react';
 import type { GetServerSideProps, NextPage } from 'next';
-import { getAboutUs } from '~/lib/api/commons';
-import { AboutUs } from '~/types/base';
+import { getTermCondition } from '~/lib/api/commons';
+import { TermCondtion } from '~/types/base';
 import { NextSeo } from 'next-seo';
 
-interface AboutUsProps {
-  data: AboutUs;
+interface TermConditionProps {
+  data: TermCondtion;
 }
 
-const Home: NextPage<AboutUsProps> = ({ data }: AboutUsProps) => {
+const Home: NextPage<TermConditionProps> = ({ data }: TermConditionProps) => {
   return (
     <>
       <NextSeo title="About Us - Fix Creative Studio" description="Tentang Fix Creative Studio" />
@@ -23,7 +23,7 @@ const Home: NextPage<AboutUsProps> = ({ data }: AboutUsProps) => {
 };
 
 export const getServerSideProps: GetServerSideProps = async () => {
-  const data = await getAboutUs();
+  const data = await getTermCondition();
 
   return {
     props: {

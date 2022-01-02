@@ -19,7 +19,7 @@ const Category: NextPage<BlogsByCategoryProps> = ({ blogs }: BlogsByCategoryProp
         title={`${query.name as string} - Fix Creative Studio`}
         description={`Gallery ${query.name as string}`}
       />
-      <Container maxW="container.xl">
+      <Container maxW="container.xl" pb={20}>
         <Heading textTransform="capitalize" color="gray.600">
           {query.name}
         </Heading>

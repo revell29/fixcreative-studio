@@ -18,7 +18,7 @@ const Blogs: NextPage<BlogsProps> = ({ blogs }: BlogsProps) => {
         title={`${blogs[0].attributes.name} - Fix Creative Studio`}
         description={`${blogs[0].attributes.description}`}
       />
-      <Container maxW="container.xl">
+      <Container maxW="container.xl" pb={20}>
         <Heading textTransform="capitalize" color="gray.600">
           {blogs[0].attributes.name}
         </Heading>

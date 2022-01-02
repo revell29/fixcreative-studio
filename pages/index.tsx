@@ -40,7 +40,7 @@ const Home: NextPage<HomeProps> = ({ blogs, reviews, faq }: HomeProps) => {
         </Box>
         <Box py={{ base: '2rem', md: '4rem' }}>
           <Heading fontSize={{ base: '2em', md: '3em' }} textAlign="center" color="yellow.500">
-            What they say about us
+            What They Say About Us?
           </Heading>
           <ReviewHero reviews={reviews} />
         </Box>

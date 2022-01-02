@@ -1,49 +1,89 @@
 import * as React from 'react';
-import { Box, Flex, Text, Image, Stack, HStack, Link } from '@chakra-ui/react';
+import { Box, Text, Image, Flex, Stack, HStack, Link as ChakraLink, Container, SimpleGrid } from '@chakra-ui/react';
+import Link from 'next/link';
+import { Vendor } from '~/types/base';
+import { getVendors } from '~/lib/api/commons';
+import { API_URL } from '~/lib/config';
 
 export const Footer: React.FC = () => {
+  const [vendor, setVendors] = React.useState<Vendor[]>([]);
+
+  React.useEffect(() => {
+    const fetchData = async () => {
+      const response = await getVendors();
+      setVendors(response);
+    };
+    fetchData();
+  }, []);
+
   return (
-    <Box bg="primary.accent7" w="full" h="full" px={{ base: '20px', lg: '12rem' }} mt={10}>
-      <Stack py={{ base: '10', lg: '20' }} direction={['column', 'row']} spacing={{ base: '2', sm: '5', lg: '10' }}>
-        <Flex direction="column" justifyContent="left">
-          <Text color="white" fontSize="14px" fontWeight="semibold">
-            Links
-          </Text>
-          <Link color="white" fontSize="13px" href="/" py="1">
-            Home
-          </Link>
-          <Link color="white" fontSize="13px" href="/category/studio">
-            Studio
-          </Link>
-        </Flex>
-        <Flex direction="column" mx="40px">
-          <Text fontWeight="semibold" color="white" fontSize="14px">
-            Social Media
-          </Text>
-          <Link href="https://www.instagram.com/fixcreativephotography/" isExternal color="white">
-            <HStack>
-              <Image src="/assets/sosmed/instagram.svg" alt="instagram" w="24px" />
-              <Text color="white" fontSize="13px">
-                Fixcreative
-              </Text>
-            </HStack>
-          </Link>
-        </Flex>
-        <Flex direction="column" mx="20px">
-          <Text fontWeight="semibold" color="white" fontSize="14px">
-            Address
-          </Text>
-          <HStack>
-            <Image src="/assets/sosmed/whatsapp.svg" alt="" />
-            <Text fontSize="13px" color="white">
-              0813 1594 1338
+    <Box py={20} px={[5, 5, 10]} bg="primary.accent7">
+      <Container maxW="container.xl">
+        <Flex gap={[2, 10, 20]} flexDir={['column', 'column', 'row']}>
+          <Stack w="full">
+            <Text color="white" fontWeight="semibold">
+              Contact Us
             </Text>
-          </HStack>
+            <ChakraLink href="https://www.instagram.com/fixcreativephotography/" isExternal color="white">
+              <HStack>
+                <Image src="/assets/sosmed/instagram.svg" alt="instagram" w="24px" />
+                <Text color="white" fontSize="13px">
+                  Fixcreative
+                </Text>
+              </HStack>
+            </ChakraLink>
+            <ChakraLink href="https://www.instagram.com/fixcreativephotography/" isExternal color="white">
+              <HStack>
+                <Image src="/assets/sosmed/whatsapp.svg" alt="instagram" w="24px" />
+                <Text color="white" fontSize="13px">
+                  0813 1594 1338
+                </Text>
+              </HStack>
+            </ChakraLink>
+          </Stack>
+          <Stack w="full">
+            <Link href="/category/studio" passHref>
+              <Text as="a" color="white" fontWeight="semibold">
+                Studio
+              </Text>
+            </Link>
+            <Link href="/category/wedding" passHref>
+              <Text as="a" color="white" fontWeight="semibold">
+                Wedding
+              </Text>
+            </Link>
+            <Link href="/term-condition" passHref>
+              <Text as="a" color="white" fontWeight="semibold">
+                Syarat & Ketentuan
+              </Text>
+            </Link>
+          </Stack>
+          <Stack w="full">
+            <Text color="white" fontWeight="semibold">
+              Vendor
+            </Text>
+            <SimpleGrid gap={2} columns={[3]}>
+              {vendor &&
+                vendor.map((vn) => (
+                  <Image
+                    src={`${API_URL}${vn.attributes.logo.data.attributes.url}`}
+                    alt={vn.attributes.vendor_name}
+                    w="90px"
+                    key={vn.id}
+                  />
+                ))}
+            </SimpleGrid>
+          </Stack>
+          <Stack w="full">
+            <Text color="white" fontWeight="semibold">
+              Address
+            </Text>
+            <Text color="white">
+              Jl. Wibawa Mukti II No.RT06/04, Jatisari, Kec. Jatiasih, Kota Bks, Jawa Barat 17426
+            </Text>
+          </Stack>
         </Flex>
-      </Stack>
-      <Text textAlign="center" fontSize="14px" color="white" pb="10px">
-        &copy;{new Date().getFullYear()}. Powered by <b>Fixcreative</b>.
-      </Text>
+      </Container>
     </Box>
   );
 };

@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { AboutUs, Faq, FragmentCategory, Reviews } from '~/types/base';
+import { AboutUs, Faq, FragmentCategory, Reviews, TermCondtion, Vendor } from '~/types/base';
 import { API_URL, TOKEN } from '../config';
 import qs from 'qs';
 
@@ -19,6 +19,19 @@ export const getCategory = async (): Promise<FragmentCategory[]> => {
 export const getAboutUs = async (): Promise<AboutUs> => {
   try {
     const res = await axios.get(`${API_URL}/api/about-us`, {
+      headers: {
+        Authorization: `Bearer ${TOKEN}`,
+      },
+    });
+    return res.data.data;
+  } catch (error: any) {
+    return error.response.data;
+  }
+};
+
+export const getTermCondition = async (): Promise<TermCondtion> => {
+  try {
+    const res = await axios.get(`${API_URL}/api/syarat-and-ketentuan`, {
       headers: {
         Authorization: `Bearer ${TOKEN}`,
       },
@@ -55,6 +68,19 @@ export const getReviews = async (): Promise<Reviews[]> => {
 export const getFaq = async (): Promise<Faq[]> => {
   try {
     const res = await axios.get(`${API_URL}/api/faqs`, {
+      headers: {
+        Authorization: `Bearer ${TOKEN}`,
+      },
+    });
+    return res.data.data;
+  } catch (error: any) {
+    return error.response.data;
+  }
+};
+
+export const getVendors = async (): Promise<Vendor[]> => {
+  try {
+    const res = await axios.get(`${API_URL}/api/vendors?populate=*`, {
       headers: {
         Authorization: `Bearer ${TOKEN}`,
       },
