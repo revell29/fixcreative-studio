@@ -1,4 +1,4 @@
 export const routes = {
-  '/category/studio': 'Studio',
+  '/category/prewedding': 'Prewedding',
   '/about': 'About Us',
 };

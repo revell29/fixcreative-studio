@@ -32,7 +32,7 @@ export const Footer: React.FC = () => {
                 </Text>
               </HStack>
             </ChakraLink>
-            <ChakraLink href="https://www.instagram.com/fixcreativephotography/" isExternal color="white">
+            <ChakraLink href="https://wa.link/766dn8" isExternal color="white">
               <HStack>
                 <Image src="/assets/sosmed/whatsapp.svg" alt="instagram" w="24px" />
                 <Text color="white" fontSize="13px">

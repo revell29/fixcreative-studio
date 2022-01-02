@@ -23,7 +23,7 @@ export const LayoutRoot: React.FC = ({ children }) => {
         {children}
       </Box>
       <Footer />
-      <Link href="https://wa.link/fxkt6m" target="_blank">
+      <Link href="https://wa.link/766dn8" target="_blank">
         <Flex
           bg="green.500"
           position="fixed"
