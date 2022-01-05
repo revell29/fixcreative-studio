@@ -42,12 +42,12 @@ export const Footer: React.FC = () => {
             </ChakraLink>
           </Stack>
           <Stack w="full">
-            <Link href="/category/studio" passHref>
+            <Link href="/category/Photo%20Studio" passHref>
               <Text as="a" color="white" fontWeight="semibold">
                 Studio
               </Text>
             </Link>
-            <Link href="/category/wedding" passHref>
+            <Link href="/category/Wedding" passHref>
               <Text as="a" color="white" fontWeight="semibold">
                 Wedding
               </Text>
